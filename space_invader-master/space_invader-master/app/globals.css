@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+html {
+  font-size: 10px;
+}
+
+.home_alien {
+  top: 0;
+  right: 0;
+  animation: homeAlienMove 10s infinite;
+}
+
+@keyframes homeAlienMove {
+  0% {right: 0; top: 0; scale: 1;}
+  25% {right: 60%; top: 0; scale: 0.6;}
+  50% {right: 70%; top: 60%; scale: 1;}
+  75% {right: 10%; top: 60%; scale: 0.6;}
+  100% {right: 0; top: 0; scale: 1;}
+}
+
+.speed_lines {
+  animation: speedLinesMove 0.3s infinite;
+}
+
+@keyframes speedLinesMove {
+  from {
+   scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
+
+
+.planets_left {
+  animation: planetLeftMove 4s;
+}
+
+@keyframes planetLeftMove {
+  from {
+   left : 25%;
+   width: 0rem;
+  }
+  to {
+    left: -40%;
+    width: 60rem;
+  }
+}
+
+.planets_right { 
+  animation: planetRightMove 4s;
+  animation-delay: 2s;
+}
+
+@keyframes planetRightMove {
+  from {
+   right : 25%;
+   width: 0rem;
+  }
+  to {
+    right: -40%;
+    width: 60rem;
+  }
+}
+
